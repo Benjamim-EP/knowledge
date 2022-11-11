@@ -1,16 +1,16 @@
 <template>
     <div class="user-admin">
-       <h1>Usuario componente</h1>
+       <b-table hover striped :items="users" :fields="fields"></b-table>
     </div>
 </template>
 
 <script>
-//import { baseApiUrl, showError } from '@/global'
-//import axios from 'axios'
+import { baseApiUrl } from '@/global'
+import axios from 'axios'
 
 export default {
     name: 'UserAdmin',
-    /*data: function() {
+    data: function() {
         return {
             mode: 'save',
             user: {},
@@ -30,8 +30,9 @@ export default {
             const url = `${baseApiUrl}/users`
             axios.get(url).then(res => {
                 this.users = res.data
+                
             })
-        },
+        }/*,
         reset() {
             this.mode = 'save'
             this.user = {}
@@ -59,11 +60,11 @@ export default {
         loadUser(user, mode = 'save') {
             this.mode = mode
             this.user = { ...user }
-        }
+        }*/
     },
     mounted() {
         this.loadUsers()
-    }*/
+    }
 }
 </script>
 
