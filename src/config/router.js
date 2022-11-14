@@ -7,7 +7,7 @@ import ArticlesByCategory from '@/components/article/ArticlesByCategory'
 import ArticleById from '@/components/article/ArticleById'
 import Auth from '@/components/auth/Auth'
 
-//import { userKey } from '@/global'
+import { userKey } from '@/global'
 
 Vue.use(VueRouter)
 
@@ -38,7 +38,7 @@ const router = new VueRouter({
     mode: 'history',
     routes
 })
-/*
+
 router.beforeEach((to, from, next) => {
     const json = localStorage.getItem(userKey)
 
@@ -48,6 +48,6 @@ router.beforeEach((to, from, next) => {
     } else {
         next()
     }
-})*/
+})
 
 export default router
